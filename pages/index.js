@@ -1,32 +1,42 @@
 // import Home from './_components/home';
-
 const Dashboard = () => {
+  const data ={
+  labels : ["January", "February", "March", "April", "May", "June"],
+  datasets: [
+      {
+        data: [0, 10, 5, 2, 20, 30, 45],
+      },
+    ],
+  };
   return(
-    <div className="bg-slate-100 h-screen">
-      <div className="container p-5">
+    <div className="h-screen bg-slate-100">
+      <div className="p-5">
         <div className="flex flex-row gap-3">
-          <div className="basis-1/4">
-            <div className="flex-col border-solid bg-white border-gray-100 rounded-md border border-slate-200 h-screen">
-              <div className="flex justify-center">SIDEBAR</div>
-              <div className="flex justify-center">test</div>
-              <div className="flex justify-center">test</div>
-            </div>
-          </div>
-          <div className="basis-3/4">
-            <div className="w-full h-12 bg-white rounded-2xl text-center">
-              <div className="align-start bg-gray-200 w-60 h-8 rounded-md">
-                <a className="">SEARCH</a>
-                <a className="">IMG</a>
+          <div className="text-2xl basis-1/5">
+            <div className="flex-col h-screen uppercase bg-white border border-solid rounded-2xl border-slate-200">
+              <div className="flex justify-center h-16 cursor-pointer mt-60 hover:text-blue-700">
+                SIDEBAR
+              </div>
+              <div className="flex justify-center h-16 cursor-pointer hover:text-blue-700">
+                test
+              </div>
+              <div className="flex justify-center h-16 cursor-pointer hover:text-blue-700">
+                test
               </div>
             </div>
-            <div className="flex flex-row gap-3">
-              CONTENT
+          </div>
+          <div className="basis-4/5">
+            <div className="h-screen bg-white border border-solid rounded-2xl border-slate-200">
+              <div className="p-5 text-xl text-bold">Dashboard</div>
+              
             </div>
           </div>
         </div>
       </div>
     </div>
+    
   );
+  
 }
 
 export default Dashboard;
